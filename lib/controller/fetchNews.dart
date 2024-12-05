@@ -9,44 +9,11 @@ import '../model/newsArt.dart';
 class FetchNews{
   static List sourcesId = [
     "abc-news",
-
     "bbc-news",
     "bbc-sport",
-
-    "business-insider",
-
     "engadget",
-    "entertainment-weekly",
-    "espn",
-    "espn-cric-info",
     "financial-post",
 
-    "fox-news",
-    "fox-sports",
-    "globo",
-    "google-news",
-    "google-news-in",
-
-    "medical-news-today",
-
-    "national-geographic",
-
-    "news24",
-    "new-scientist",
-
-    "new-york-magazine",
-    "next-big-future",
-
-    "techcrunch",
-    "techradar",
-
-    "the-hindu",
-
-    "the-wall-street-journal",
-
-    "the-washington-times",
-    "time",
-    "usa-today",
 
   ];
   static Future<NewsArt>fetchNews()async{
@@ -58,7 +25,7 @@ class FetchNews{
     List articles=body_data["articles"];
 
     final _Newrandom = new Random();
-    var myArticle = articles[_random.nextInt(articles.length)];
+    var myArticle = articles[_Newrandom.nextInt(articles.length)];
 
     print(myArticle);
    return NewsArt.fromAPItoApp(myArticle);

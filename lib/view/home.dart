@@ -19,6 +19,8 @@ class _HomeScreenState extends State<HomeScreen> {
    newsArt= await FetchNews.fetchNews();
    setState(() {
      isLoading=false;
+
+
    });
   }
 
