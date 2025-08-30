@@ -22,20 +22,18 @@ class _DetailVewScreenState extends State<DetailVewScreen> {
 
   }
   final Completer<WebViewController>controller=Completer<WebViewController>();
+
   @override
   Widget build(BuildContext context){
     return Scaffold(
-      body:WebView(
-        initialUrl: widget.newsUrl,
-        javascriptMode: JavascriptMode.unrestricted,
-        onWebViewCreated: (WebViewController webViewController){
-          setState(() {
-            controller.complete(webViewController);
-          });
-
-        }
-
-      ),
+      // body:WebView(
+      //   initialUrl: widget.newsUrl,
+      //   javascriptMode: JavascriptMode.unrestricted,
+      //   onWebViewCreated: (WebViewController webViewController){
+      //     setState(() {
+      //       controller.complete(webViewController);
+      //     });
+      //   }),
     );
   }
 }
